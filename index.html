@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Tracker</title>
+    <script>
+        function sendEmail() {
+            const email = document.getElementById('userEmail').value;
+            const subject = "Support Request";
+            const body = "Hello, I need assistance with...";
+            const mailtoLink = `mailto:support@goodmorningglobal.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
+            // Log the user's email (this can be replaced with any logging method)
+            console.log('User Email:', email); // For demonstration; replace with actual logging code.
+            
+            // Redirect to mailto link
+            window.location.href = mailtoLink;
+        }
+    </script>
+</head>
+<body>
+    <h2>Contact Us</h2>
+    <p>If you have any questions, please enter your email and click the button below:</p>
+    <input type="email" id="userEmail" placeholder="Your Email" required>
+    <button onclick="sendEmail()">Send Email</button>
+</body>
+</html>
